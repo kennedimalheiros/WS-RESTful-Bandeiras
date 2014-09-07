@@ -27,12 +27,15 @@ public class Bandeira implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+    
     @Column(nullable = false)
     private String sigla;
-    @Column(nullable = false)
-    private String url;
+    
     @Column(nullable = false)
     private String nome;
+    
+    @Column(nullable = false)
+    private String urlBandeira;
 
     public Bandeira() {
     }
@@ -53,14 +56,6 @@ public class Bandeira implements Serializable {
         this.sigla = sigla;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
     public String getNome() {
         return nome;
     }
@@ -69,4 +64,13 @@ public class Bandeira implements Serializable {
         this.nome = nome;
     }
 
+    public String getUrlBandeira() {
+        return urlBandeira;
+    }
+
+    public void setUrlBandeira(String urlBandeira) {
+        this.urlBandeira = urlBandeira;
+    }
+
+  
 }

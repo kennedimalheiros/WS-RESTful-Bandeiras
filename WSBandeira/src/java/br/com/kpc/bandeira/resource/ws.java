@@ -46,8 +46,8 @@ public class ws {
         } catch (Exception ex) {
             Logger.getLogger(ws.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println(bandeira.getUrl());
-        return bandeira.getUrl();
+        System.out.println(bandeira.getUrlBandeira());
+        return bandeira.getUrlBandeira();
 
     }
 
