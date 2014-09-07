@@ -14,6 +14,6 @@ import javax.ejb.Remote;
 @Remote
 public interface IRepositoryBandeira extends IRepository<Bandeira> {
 
-    Bandeira getBandeiraSigla(String sigla);
+    Bandeira getBandeiraSigla(String sg);
 
 }
