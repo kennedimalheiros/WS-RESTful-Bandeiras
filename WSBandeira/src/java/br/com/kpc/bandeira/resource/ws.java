@@ -21,10 +21,9 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author pcego
  * @author KennediMalheiros
-*/
-@XmlRootElement
+ */
 @Path("/wsbandeira")
-public class ws {
+public class Ws {
 
     private Bandeira bandeira = new Bandeira();
 
@@ -36,19 +35,17 @@ public class ws {
     @Produces(MediaType.APPLICATION_JSON)
     // anotation @Path define o caminho para o recurso
     @Path("/getBandeira/{sigla}")
-    public String keyValidatorGen(@PathParam("sigla") String param) {
+    public String getUrlBandeira(@PathParam("sigla") String sg) {
         try {
             rpbBandeira = (IRepositoryBandeira) ContextoInicial.getContext().lookup("java:global/WSBandeira/BandeiraDao");
 
             //Loading object computer
-            bandeira = rpbBandeira.getBandeiraSigla(param);
+            bandeira = rpbBandeira.getBandeiraSigla(sg);
+            return bandeira.getUrlBandeira();
 
         } catch (Exception ex) {
-            Logger.getLogger(ws.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("falha ao carregar url retorno");
+            return null;
         }
-        System.out.println(bandeira.getUrlBandeira());
-        return bandeira.getUrlBandeira();
-
     }
-
 }

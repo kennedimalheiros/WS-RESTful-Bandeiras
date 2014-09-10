@@ -9,22 +9,41 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.com.kpc.bandeiras.Bandeiras" >
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/informeSigla" />
+
+        <EditText
+            android:id="@+id/etSigla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Ex: BR" />
+    </LinearLayout>
 
     <Button
+        android:id="@+id/btCarregarURL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="btConsumirWs"
-        android:text="Texte" />
+        android:text="@string/btCarregarWs" />
 
     <TextView
         android:id="@+id/tvURL"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btCarregarIMG"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="URL" />
+        android:onClick="btCarregarImg"
+        android:text="@string/btCarregarBandeira" />
 
     <ImageView
         android:id="@+id/imgBandeira"

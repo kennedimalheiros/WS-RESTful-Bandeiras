@@ -2,7 +2,10 @@
 <resources>
 
     <string name="app_name">Bandeiras</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="informeSigla">Informe a sigla da bandeira:</string>
     <string name="action_settings">Settings</string>
+    <string name="btCarregarBandeira">Carregar Imagem</string>
+    <string name="btCarregarWs">Buscar URL</string>
+    
 
 </resources>
