@@ -5,6 +5,7 @@
  */
 package br.com.kpc.bandeira.core;
 
+import java.util.List;
 import javax.ejb.Remote;
 
 /**
@@ -15,5 +16,6 @@ import javax.ejb.Remote;
 public interface IRepositoryBandeira extends IRepository<Bandeira> {
 
     Bandeira getBandeiraSigla(String sg);
+    List<Bandeira> getTodasBandeiras();
 
 }
