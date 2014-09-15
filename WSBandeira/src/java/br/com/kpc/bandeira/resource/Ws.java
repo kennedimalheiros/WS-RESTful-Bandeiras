@@ -51,7 +51,6 @@ public class Ws {
     }
 
     // anotation @GET define o método HTTP ao qual o recurso responde
-
     @GET
     // anotation @Produces define o tipo de retorno do recurso
     @Produces(MediaType.APPLICATION_JSON)
