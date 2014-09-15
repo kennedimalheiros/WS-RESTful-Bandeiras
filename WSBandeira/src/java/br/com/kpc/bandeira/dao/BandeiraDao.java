@@ -7,6 +7,7 @@ package br.com.kpc.bandeira.dao;
 
 import br.com.kpc.bandeira.core.Bandeira;
 import br.com.kpc.bandeira.core.IRepositoryBandeira;
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.Query;
 
@@ -28,6 +29,20 @@ public class BandeiraDao extends GenericDao<Bandeira> implements IRepositoryBand
             Query query = getManager().createQuery("select bd from Bandeira bd where bd.sigla = :sigla");
             query.setParameter("sigla", sg);
             return (Bandeira) query.getSingleResult();
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public List<Bandeira> getTodasBandeiras() {
+        try {
+
+            Query query = getManager().createQuery("select b from Bandeira b order by b.nome ");
+
+            return query.getResultList();
 
         } catch (Exception ex) {
             ex.printStackTrace();
