@@ -7,6 +7,7 @@ package br.com.kpc.bandeira.resource;
 
 import br.com.kpc.bandeira.core.Bandeira;
 import br.com.kpc.bandeira.core.IRepositoryBandeira;
+import java.util.List;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -42,6 +43,26 @@ public class Ws {
             //Loading object computer
             bandeira = rpbBandeira.getBandeiraSigla(sg);
             return bandeira.getUrlBandeira();
+
+        } catch (Exception ex) {
+            System.out.println("falha ao carregar url retorno");
+            return null;
+        } 
+    }
+
+    // anotation @GET define o método HTTP ao qual o recurso responde
+    @GET
+    // anotation @Produces define o tipo de retorno do recurso
+    @Produces(MediaType.APPLICATION_JSON)
+    // anotation @Path define o caminho para o recurso
+    @Path("/getTodasBandeiras/")
+    public List<Bandeira> getUrlTodasBandeiras() {
+        try {
+
+            rpbBandeira = (IRepositoryBandeira) ContextoInicial.getContext().lookup("java:global/WSBandeira/BandeiraDao");
+
+            //Loading object computer
+            return rpbBandeira.getTodasBandeiras();
 
         } catch (Exception ex) {
             System.out.println("falha ao carregar url retorno");

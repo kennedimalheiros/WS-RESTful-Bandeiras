@@ -47,7 +47,7 @@ public class Ws {
         } catch (Exception ex) {
             System.out.println("falha ao carregar url retorno");
             return null;
-        }
+        } 
     }
 
     // anotation @GET define o método HTTP ao qual o recurso responde
