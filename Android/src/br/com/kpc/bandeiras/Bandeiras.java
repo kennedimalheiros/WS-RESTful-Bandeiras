@@ -1,22 +1,15 @@
 package br.com.kpc.bandeiras;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.MalformedURLException;
-import java.net.URL;
 
-import org.apache.http.message.BufferedHeader;
-
-import android.renderscript.Script.FieldBase;
-import android.support.v7.app.ActionBarActivity;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
